@@ -27,5 +27,8 @@ for each (k , k) from map we have the key k and associated values([k<sub>i   ]) 
 for each (k , 1) from first reduce ; produce (1 , (k , 1))
 ###  second reduce function:
  produce (1 , (0 , sum(1,1 ,...)))
-
+ 
+ 
+ # exercise2.3.2
+ the solution had been written in the book for a square matrix makes sense for a r*c matrix .
     
