@@ -40,15 +40,28 @@ for each (k , 1) from first reduce ; produce (1 , (k , 1))
   for each (t ,1) ; produce (t , sum(1,1,1,...))
   ## _(b)_
    ### map function:
-  for each tuple t in R  emit key-value triple(R,t,1) and likewise for  each tuple t in S  emit key-value triple(S,(t,1))
+ for each tuple t in R  emit key-value triple((R,t),1)) and likewise for  each tuple t in S  emit key-value triple((S,t),1))
   ### reduce function:
   for each triple in  R release (R , (t , sum(1,1,...))) likewise for S
    ### second map function:
    input triples from above reduce and map(R , (t , sum(1,1,...))) to (t , sum(1 ,1,1))  likewise for S
    ### second reduce function:
-   now we have the (t)keys  and  alist of values like(t , sum());  release(t, min(sums))
+   now we have the (t)keys  and  a list of values like(t , sum());  release(t, min(sums))
+   ## _(c)_
+   ### map function:
+  for each tuple t in R  emit key-value triple((R,t),1)) and likewise for  each tuple t in S  emit key-value triple((S,t),1))
+  ### reduce function:
+  for each triple in  R release (R , (t , sum(1,1,...))) likewise for S
+  assume that sum(1,1,1) in R=r and in S=s
+   ### second map function:
+   input triples from above reduce and map(R , (t ,r)) to (t , r)  likewise for S
+   ### second reduce function:
+  release (t,k=r-s)
   
-  
+   ### third map function:
+   input triples above and map identically
+   ### third reduce function:
+   if k>0 then produce k tuples of t else end
   # exercise2.3.4
   
   
