@@ -15,7 +15,17 @@ for each (1 , k) from map we have the key 1 and associated values ; reduce funct
 ### map function:
 for each integer (k);produce (k , k )
 ### reduce function:
-for each (k , k) from map we have the key k and associated values(k ,[k<sub>i   ]) ; reduce  function's task is producing(k , 1) 
+for each (k , k) from map we have the key k and associated values([k<sub>i   ]) ; reduce  function's task is producing(k , 1) 
 
+## _(d)_    
+### map function:
+for each integer (k);produce (k , k )
+### reduce function:
+for each (k , k) from map we have the key k and associated values([k<sub>i   ]) ; reduce  function's task is producing(k , 1)
+    
+### second map function:
+for each (k , 1) from first reduce ; produce (1 , (k , 1))
+###  second reduce function:
+ produce (1 , (0 , sum(1,1 ,...)))
 
     
