@@ -15,7 +15,7 @@ for each (1 , k) from map we have the key 1 and associated values ; reduce funct
 ### map function:
 for each integer (k);produce (k , k )
 ### reduce function:
-for each (k , k) from map we have the key k and associated values(k , avg[k<sub>i ]) ; reduce  function's task is producing(k , 1) 
+for each (k , k) from map we have the key k and associated values(k ,[k<sub>i   ]) ; reduce  function's task is producing(k , 1) 
 
 
     
