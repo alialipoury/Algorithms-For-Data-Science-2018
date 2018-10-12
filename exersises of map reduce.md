@@ -1,4 +1,4 @@
-#exersise2.3.1
+# exersise2.3.1
 ## _(a)_   
 ### map function:
 for each integer (k);produce (1 , k )
